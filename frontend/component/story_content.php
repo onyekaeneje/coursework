@@ -7,7 +7,7 @@
                 </div>
                 <div class=" single-entry featured-entry text-center wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
                     <div class="entry-thumb mb-5">
-                        <a href="post-style-1.html"> <img src="assets/images/feature-6.jpg" class="img-fluid" alt="blog"></a>
+                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/feature-6.jpg" class="img-fluid" alt="blog"></a>
                         <div class="entry-share d-flex">
                             <a href="#"><i class="fa fa-heart"></i></a>
                             <a href="post-style-1.html"><i class="fa fa-link"></i></a>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
                     <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="assets/images/b-1.jpg" class="img-fluid" alt="blog"></a>
+                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-1.jpg" class="img-fluid" alt="blog"></a>
                         <div class="entry-share d-flex">
                             <a href="#"><i class="fa fa-heart"></i></a>
                             <a href="post-style-1.html"><i class="fa fa-link"></i></a>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
                     <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="assets/images/b-4.jpg" class="img-fluid" alt="blog"></a>
+                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-4.jpg" class="img-fluid" alt="blog"></a>
                         <div class="entry-share d-flex">
                             <a href="#"><i class="fa fa-heart"></i></a>
                             <a href="post-style-1.html"><i class="fa fa-link"></i></a>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
                     <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="assets/images/b-5.jpg" class="img-fluid" alt="blog"></a>
+                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-5.jpg" class="img-fluid" alt="blog"></a>
                         <div class="entry-share d-flex">
                             <a href="#"><i class="fa fa-heart"></i></a>
                             <a href="post-style-1.html"><i class="fa fa-link"></i></a>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="single-entry featured-entry text-center wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
                     <div class="entry-thumb mb-5">
-                        <a href="post-style-1.html"> <img src="assets/images/feature-7.jpg" class="img-fluid" alt="blog"></a>
+                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/feature-7.jpg" class="img-fluid" alt="blog"></a>
                         <div class="entry-share d-flex">
                             <a href="#"><i class="fa fa-heart"></i></a>
                             <a href="post-style-1.html"><i class="fa fa-link"></i></a>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
                     <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="assets/images/b-6.jpg" class="img-fluid" alt="blog"></a>
+                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-6.jpg" class="img-fluid" alt="blog"></a>
                         <div class="entry-share d-flex">
                             <a href="#"><i class="fa fa-heart"></i></a>
                             <a href="post-style-1.html"><i class="fa fa-link"></i></a>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
                     <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="assets/images/b-7.jpg" class="img-fluid" alt="blog"></a>
+                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-7.jpg" class="img-fluid" alt="blog"></a>
                         <div class="entry-share d-flex">
                             <a href="#"><i class="fa fa-heart"></i></a>
                             <a href="post-style-1.html"><i class="fa fa-link"></i></a>
@@ -146,7 +146,7 @@
                 </div>
                 <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
                     <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="assets/images/b-2.jpg" class="img-fluid" alt="blog"></a>
+                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-2.jpg" class="img-fluid" alt="blog"></a>
                         <div class="entry-share d-flex">
                             <a href="#"><i class="fa fa-heart"></i></a>
                             <a href="post-style-1.html"><i class="fa fa-link"></i></a>
@@ -173,23 +173,23 @@
 
             <div class="col-lg-4 sidebar left-line ps-5">
                 <div class="widget author text-center">
-                    <a href="#"><img class="rounded-circle" width="190" src="assets/images/author.png" alt="author"></a>
+                    <a href="#"><img class="rounded-circle" width="190" src="/coursework/frontend/assets/images/author.png" alt="author"></a>
                     <h5 class="my-4"><?php echo $data ?></h5>
                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                     </p>
-                    <!-- <img src="assets/images/sign3.png" alt="Author"> -->
+                    <!-- <img src="/coursework/frontend/assets/images/sign3.png" alt="Author"> -->
                 </div>
 
                 <div class="widget add">
                     <h2>Advertisement</h2>
-                    <a href="#"><img src="assets/images/add-2.jpg" class="img-fluid" alt="add"></a>
+                    <a href="#"><img src="/coursework/frontend/assets/images/add-2.jpg" class="img-fluid" alt="add"></a>
                 </div>
                 <div class="widget post-widget">
                     <div class="widget-title">
                         <h2 id="recently_viewed">Recently Viewed</h2>
                     </div>
                     <div class=" d-flex align-items-center mb-5">
-                        <a href="post-style-1.html"><img class="rounded-circle" src="assets/images/rb-2.jpg" width="86" alt="Post image">
+                        <a href="post-style-1.html"><img class="rounded-circle" src="/coursework/frontend/assets/images/rb-2.jpg" width="86" alt="Post image">
                         </a>
                         <div class="ps-3">
                             <h4 class="title-sm">
@@ -200,7 +200,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-5">
-                        <a href="post-style-1.html"><img class="rounded-circle" src="assets/images/rb-1.jpg" width="86" alt="Post image">
+                        <a href="post-style-1.html"><img class="rounded-circle" src="/coursework/frontend/assets/images/rb-1.jpg" width="86" alt="Post image">
                         </a>
                         <div class="ps-3">
                             <h4 class="title-sm">
@@ -211,7 +211,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-5">
-                        <a href="post-style-1.html"><img class="rounded-circle" src="assets/images/rb-1.jpg" width="86" alt="Post image">
+                        <a href="post-style-1.html"><img class="rounded-circle" src="/coursework/frontend/assets/images/rb-1.jpg" width="86" alt="Post image">
                         </a>
                         <div class="ps-3">
                             <h4 class="title-sm">
@@ -222,7 +222,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-5">
-                        <a href="post-style-1.html"><img class="rounded-circle" src="assets/images/rb-1.jpg" width="86" alt="Post image">
+                        <a href="post-style-1.html"><img class="rounded-circle" src="/coursework/frontend/assets/images/rb-1.jpg" width="86" alt="Post image">
                         </a>
                         <div class="ps-3">
                             <h4 class="title-sm">

@@ -2,12 +2,12 @@
 <section class="hero-slider">
     <div class="owl-carousel owl-theme" id="hero-slider-two">
         <?php
-        include_once $_SERVER['DOCUMENT_ROOT'] . "/storyapp/backend/models/category.php";
-        include_once $_SERVER['DOCUMENT_ROOT'] . "/storyapp/backend/models/story.php";
+        include_once ROOTPATH . "/backend/models/category.php";
+        include_once ROOTPATH . "/backend/models/story.php";
         $categories = Category::all();
         foreach ($categories as $index => $category) {
         ?>
-            <div class="item py-10 overly" style="background-image: url(assets/images/<?php echo $category->image ?>);">
+            <div class="item py-10 overly" style="background-image: url(frontend/assets/images/<?php echo $category->image ?>);">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-8 col-sm-10 mx-auto text-center">

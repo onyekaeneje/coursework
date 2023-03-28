@@ -3,7 +3,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/backend/connection.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/backend/models/user.php";
 $email = $password = $confirm_password = "";
 $email_err = $password_err = $confirm_password_err = "";
-$success_message = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -62,12 +61,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             'email' => $email,
             'password' => password_hash($password, PASSWORD_DEFAULT),
             'first_name' => trim($_POST["first_name"]),
-            'last_name' => trim($_POST["last_name"]),
-            'role_id' => trim($_POST["role"])
+            'last_name' => trim($_POST["last_name"])
         ]);
 
         if (gettype($user) != 'string') {
-            $success_message = "Your account has been created successfully";
             // Redirect to login page
             header("location: login.php");
         } else {
@@ -101,51 +98,26 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/frontend/layout/header.php
             <div class="col-lg-8 mx-auto">
                 <div class="signup-form shadow-sm rounded">
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <h2 class="display-4">Register</h2>
-                        <?php if(!empty($success_message)) : ?>
-                            <div class="alert alert-success">
-                            <p><?php echo $success_message; ?></p>
-                        </div>
-                        <?php endif ?>
-                        <p class="text-muted mb-5">Create your account. It's free and only takes a minute.</p>
+                        <h2 class="display-4">Login</h2>
+                        <p class="text-muted mb-5">Login into your account. It's time to explore.</p>
+                    
                         <div class="form-group">
-                            <div class="row">
-                                <div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required" fdprocessedid="6maysa"></div>
-                                <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required" fdprocessedid="jh193h"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col"> <input type="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" name="email" placeholder="Email" required="required" fdprocessedid="eg38to">
-                                    <span class="invalid-feedback"><?php echo $email_err; ?></span>
-                                </div>
-                                <div class="col">
-
-                                    <select class="form-control" name="role" id="">
-                                        <option value="">--Select Role--</option>
-                                        <?php foreach (Role::all() as $key => $value) : if( $value->name == 'admin') continue; ?>
-                                            <option value="<?php echo  $value->id ?>"><?php   $value->name  ?></option>
-                                        <?php endforeach;  ?>
-                                    </select>
-                                </div>
-                            </div>
+                            <input type="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" name="email" placeholder="Email" required="required" fdprocessedid="eg38to">
+                            <span class="invalid-feedback"><?php echo $email_err; ?></span>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" name="password" placeholder="Password" required="required" fdprocessedid="9pr50o">
                             <span class="invalid-feedback"><?php echo $password_err; ?></span>
                         </div>
+                       
                         <div class="form-group">
-                            <input type="password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" name="confirm_password" placeholder="Confirm Password" required="required" fdprocessedid="m6gm1">
-                            <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+                            <label class="form-check-label"><input type="checkbox" > keep me signed in.</label>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block" fdprocessedid="mtdgle">Register Now</button>
                         </div>
                     </form>
-                    <div>Already have an account? <a href="login.php">Sign in</a></div>
+                    <div>Don't have an account yet? <a href="register.php">Sign Up</a></div>
                 </div>
             </div>
         </div>
