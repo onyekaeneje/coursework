@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/backend/connection.php";
+include_once dirname(__DIR__) . "/connection.php";
 include_once "privilege.php";
 include_once "user.php";
 
@@ -178,3 +178,4 @@ class Role
 }
 
 
+?>

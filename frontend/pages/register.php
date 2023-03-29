@@ -1,10 +1,19 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/backend/connection.php";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/backend/models/user.php";
+define('ROOTPATH', dirname(__DIR__, 2) );
+include_once ROOTPATH . "/backend/connection.php";
+include_once ROOTPATH . "/backend/models/user.php";
+define('WEBPATH', "http://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF'],3) );
 $email = $password = $confirm_password = "";
 $email_err = $password_err = $confirm_password_err = "";
 $success_message = "";
 
+//check if user is logged in
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true
+) {
+    //check the authorization permission of the user
+    loginDirector();
+    exit;
+}
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -81,16 +90,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 <?php
 // global $root; 
-// $root = $_SERVER['DOCUMENT_ROOT'] . "/coursework";
-include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/frontend/layout/header.php";
+// $root = ROOTPATH . "";
+include_once ROOTPATH . "/frontend/layout/header.php";
 ?>
 
 <script>
     // remove .dark-header class
     document.getElementById("header").classList.remove("dark-header");
     // add dark logo image
-    document.getElementById("logo").src = "/coursework/frontend/assets/images/logo.png";
-    document.getElementById("logo2").src = "/coursework/frontend/assets/images/logo.png";
+    document.getElementById("logo").src = "<?php echo WEBPATH?>/frontend/assets/images/logo.png";
+    document.getElementById("logo2").src = "<?php echo WEBPATH?>/frontend/assets/images/logo.png";
     //activate the page link
     document.getElementById("signup").classList.add("active");
 </script>
@@ -103,6 +112,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/frontend/layout/header.php
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <h2 class="display-4">Register</h2>
                         <?php if(!empty($success_message)) : ?>
+                            <script>
+                                alert("Registration Successful!")
+                            </script>
                             <div class="alert alert-success">
                             <p><?php echo $success_message; ?></p>
                         </div>
@@ -124,7 +136,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/frontend/layout/header.php
                                     <select class="form-control" name="role" id="">
                                         <option value="">--Select Role--</option>
                                         <?php foreach (Role::all() as $key => $value) : if( $value->name == 'admin') continue; ?>
-                                            <option value="<?php echo  $value->id ?>"><?php   $value->name  ?></option>
+                                            <option value="<?php echo  $value->id ?>"><?php  echo $value->name  ?></option>
                                         <?php endforeach;  ?>
                                     </select>
                                 </div>
@@ -151,4 +163,4 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/frontend/layout/header.php
         </div>
     </div>
 </main>
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/frontend/layout/footer.php"; ?>
+<?php include_once ROOTPATH . "/frontend/layout/footer.php"; ?>

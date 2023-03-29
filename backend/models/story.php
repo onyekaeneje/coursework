@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . "/coursework/backend/connection.php";
+include_once dirname(__DIR__) . "/connection.php";
 include_once "category.php";
 include_once "location.php";
 include_once "user.php";
@@ -232,6 +232,6 @@ class Story
             return false;
         }
     }
-
-
 }
+
+?>

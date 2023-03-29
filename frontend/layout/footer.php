@@ -7,27 +7,32 @@
             <a href="#" class="btn btn-primary">@Follow on Instagram</a>
             <div class="insta-item">
                 <a href="#">
-                    <img src="/coursework/frontend/assets/images/insta-1.jpg" class="img-fluid" alt="instgram">
+                    <img src="<?php // echo WEBPATH 
+                                ?>/frontend/assets/images/insta-1.jpg" class="img-fluid" alt="instgram">
                 </a>
             </div>
             <div class="insta-item">
                 <a href="#">
-                    <img src="/coursework/frontend/assets/images/insta-2.jpg" class="img-fluid" alt="instgram">
+                    <img src="<?php // echo WEBPATH 
+                                ?>/frontend/assets/images/insta-2.jpg" class="img-fluid" alt="instgram">
                 </a>
             </div>
             <div class="insta-item">
                 <a href="#">
-                    <img src="/coursework/frontend/assets/images/insta-3.jpg" class="img-fluid" alt="instgram">
+                    <img src="<?php // echo WEBPATH 
+                                ?>/frontend/assets/images/insta-3.jpg" class="img-fluid" alt="instgram">
                 </a>
             </div>
             <div class="insta-item">
                 <a href="#">
-                    <img src="/coursework/frontend/assets/images/insta-4.jpg" class="img-fluid" alt="instgram">
+                    <img src="<?php // echo WEBPATH 
+                                ?>/frontend/assets/images/insta-4.jpg" class="img-fluid" alt="instgram">
                 </a>
             </div>
             <div class="insta-item">
                 <a href="#">
-                    <img src="/coursework/frontend/assets/images/insta-5.jpg" class="img-fluid" alt="instgram">
+                    <img src="<?php // echo WEBPATH 
+                                ?>/frontend/assets/images/insta-5.jpg" class="img-fluid" alt="instgram">
                 </a>
             </div>
         </div>
@@ -40,16 +45,16 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <div class="footer-logo text-center">
-                    <a href="index.html"><img src="/coursework/frontend/assets/images/logo.png" alt=""></a>
+                    <a href="index.html"><img src="<?php echo WEBPATH ?>/frontend/assets/images/logo.png" alt=""></a>
                 </div>
                 <nav class="widget footer-nav text-center py-5">
                     <ul>
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="category.html">Trending</a></li>
-                        <li><a href="category.html">Latest</a></li>
-                        <li><a href="category.html">Post a Story</a></li>
-                        <li><a href="#">SignUp/SignIn</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="active"><a href="<?php echo WEBPATH ?>/">Home</a></li>
+                        <li><a href="<?php echo WEBPATH ?>/#trending">Trending</a></li>
+                        <li><a href="<?php echo WEBPATH ?>/#latest">Latest</a></li>
+                        <li><a href="<?php echo WEBPATH ?>/frontend/pages/create.php">Post a Story</a></li>
+                        <li><a href="<?php echo WEBPATH ?>/frontend/pages/login.php">SignUp/SignIn</a></li>
+                        <li><a href="<?php echo WEBPATH ?>/frontend/pages/contact.php">Contact</a></li>
                     </ul>
                 </nav>
                 <p class="mt-5 small text-center">&copy; <?php echo Date('Y') ?> Designed with <span><i class="fa fa-heart text-danger"></i></span> by Eneje Everistus.</p>
@@ -79,17 +84,17 @@
     <button type="button" class="btn-close" aria-label="Close"></button>
 
     <div class="logo">
-        <img src="../assets/images/logo.png" alt="Logo" />
+        <img src="<?php echo WEBPATH ?>/frontend/assets/images/logo.png" alt="Logo" />
     </div>
 
     <nav>
         <ul class="vertical-menu">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="category.html">Trending</a></li>
-            <li><a href="category.html">Latest</a></li>
-            <li><a href="category.html">Post a Story</a></li>
-            <li><a href="#">SignUp/SignIn</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class=""><a href="<?php echo WEBPATH ?>/">Home</a></li>
+            <li><a href="<?php echo WEBPATH ?>/#trending">Trending</a></li>
+            <li><a href="<?php echo WEBPATH ?>/#latest">Latest</a></li>
+            <li><a href="<?php echo WEBPATH ?>/frontend/pages/create.php">Post a Story</a></li>
+            <li><a href="<?php echo WEBPATH ?>/frontend/pages/login.php">SignUp/SignIn</a></li>
+            <li><a href="<?php echo WEBPATH ?>/frontend/pages/contact.php">Contact</a></li>
         </ul>
     </nav>
 
@@ -100,15 +105,16 @@
         <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
 </div>
-<script src="/coursework/frontend/assets/js/jquery.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
-<script src="/coursework/frontend/assets/js/popper.min" type="9714ea802290c6223dcbf29b-text/javascript"></script>
-<script src="/coursework/frontend/assets/js/bootstrap.bundle.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
-<script src="/coursework/frontend/assets/js/owl.carousel.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
-<script src="/coursework/frontend/assets/js/wow.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
-<script src="/coursework/frontend/assets/js/jarallax.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
-<script src="/coursework/frontend/assets/js/jquery.scrollUp.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
-<script src="/coursework/frontend/assets/js/main.js" defer type="9714ea802290c6223dcbf29b-text/javascript"></script>
-<script src="/coursework/frontend/assets/js/rocket-loader.min.js" data-cf-settings="9714ea802290c6223dcbf29b-|49" defer=""></script>
+<script src="<?php echo WEBPATH ?>/frontend/assets/js/jquery.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
+<script src="<?php echo WEBPATH ?>/frontend/assets/js/popper.min" type="9714ea802290c6223dcbf29b-text/javascript"></script>
+<script src="<?php echo WEBPATH ?>/frontend/assets/js/bootstrap.bundle.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
+<script src="<?php echo WEBPATH ?>/frontend/assets/js/owl.carousel.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
+<script src="<?php echo WEBPATH ?>/frontend/assets/js/wow.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
+<script src="<?php echo WEBPATH ?>/frontend/assets/js/jarallax.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
+<script src="<?php echo WEBPATH ?>/frontend/assets/js/jquery.scrollUp.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
+<script src="<?php echo WEBPATH ?>/frontend/assets/js/main.js" defer type="9714ea802290c6223dcbf29b-text/javascript"></script>
+<script src="<?php echo WEBPATH ?>/frontend/assets/js/rocket-loader.min.js" data-cf-settings="9714ea802290c6223dcbf29b-|49" defer=""></script>
+<script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
 </body>
 
 </html>

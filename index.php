@@ -2,23 +2,18 @@
 
 <html lang="en">
 <?php
+session_start();
 global $root;
 $root = $_SERVER['DOCUMENT_ROOT'] . "/coursework";
 $GLOBALS['db'] = $db;
 define('ROOTPATH', __DIR__);
+define('WEBPATH', "http://". $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']));
 
 include_once "frontend/layout/header.php";
 include_once "frontend/component/home_carousel_categories.php";
 include_once "frontend/component/top-categories.php";
 include_once "frontend/component/story_content.php";
 ?>
-
-
-
-
-
-
-
 
 <section class="newsletter">
     <div class="container">
