@@ -10,10 +10,10 @@
                         <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/cat-4.jpg" class="img-fluid" alt="blog"></a>
                         <div class="entry-share d-flex">
                             <a href="#"><i class="fa fa-heart"></i></a>
-                            <a href="category.html"><i class="fa fa-link"></i></a>
+                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php"><i class="fa fa-link"></i></a>
                         </div>
                     </div>
-                    <h4 class="fs-sm"><a href="category.html">Travel Tour</a></h4>
+                    <h4 class="fs-sm"><a href="<?php echo WEBPATH ?>/frontend/pages/category.php">Travel Tour</a></h4>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-4">
@@ -25,7 +25,7 @@
                             <a href="category-2.html"><i class="fa fa-link"></i></a>
                         </div>
                     </div>
-                    <h4 class="fs-sm"><a href="category.html">Historic Sites</a></h4>
+                    <h4 class="fs-sm"><a href="<?php echo WEBPATH ?>/frontend/pages/category.php">Historic Sites</a></h4>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-4">
@@ -37,7 +37,7 @@
                             <a href="category-3.html"><i class="fa fa-link"></i></a>
                         </div>
                     </div>
-                    <h4 class="fs-sm"><a href="category.html">Natural Wonders</a></h4>
+                    <h4 class="fs-sm"><a href="<?php echo WEBPATH ?>/frontend/pages/category.php">Natural Wonders</a></h4>
                 </div>
             </div>
         </div>

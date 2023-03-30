@@ -36,10 +36,11 @@ class Story
         $this->timestamp = date("Y/m/d h:i:sa");
     }
 
-    static function all()
+    static function all($limit = 10, $published = false, $offset = 0)
     {
         connect();
-        $sql =  "SELECT * FROM stories";
+        $publish_query = $published ? " where published = 1 " : " ";
+        $sql =  "SELECT * FROM stories" . $publish_query . " ORDER BY created_at DESC LIMIT $limit OFFSET $offset" ;
         global $db;
         $result = $db->query($sql);
         $stories = [];
@@ -212,6 +213,18 @@ class Story
             return false;
         }
     }
+    public function author()
+    {
+        $user = $this->user();
+       $name  = $user->last_name . " " . $user->first_name;
+       return $name;
+    }
+    public function date()
+    {
+        
+        return
+        date("F jS, Y h:i", strtotime($this->created_at));
+    }
 
     public function comments()
     {
@@ -230,6 +243,23 @@ class Story
         } else {
             close();
             return false;
+        }
+    }
+    static function num_rows()
+    {
+        connect();
+        $sql =  "SELECT COUNT(id) as count FROM stories ";
+        global $db;
+        $result = $db->query($sql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $comment = $row['count'];
+            }
+            return $comment;
+        } else {
+            close();
+            return 0;
         }
     }
 }

@@ -15,7 +15,7 @@
                     </div>
                     <div class="entry-content px-3">
                         <span class="entry-meta">
-                            <a href="category.html">LifeStyle</a>
+                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
                         </span>
                         <h3 class="entry-title mb-4"><a href="post-style-1.html">Skip the Pie—Make This Pumpkin
                                 Layer Cake With Brown Sugar Frosting Instead</a></h3>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="entry-content">
                         <span class="entry-meta">
-                            <a href="category.html">LifeStyle</a>
+                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
                         </span>
                         <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
                                 interesting things will happen</a></h3>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="entry-content">
                         <span class="entry-meta">
-                            <a href="category.html">LifeStyle</a>
+                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
                         </span>
                         <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
                                 interesting things will happen</a></h3>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="entry-content">
                         <span class="entry-meta">
-                            <a href="category.html">LifeStyle</a>
+                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
                         </span>
                         <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
                                 interesting things will happen</a></h3>
@@ -95,7 +95,7 @@
                     </div>
                     <div class="entry-content px-3">
                         <span class="entry-meta">
-                            <a href="category.html">LifeStyle</a>
+                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
                         </span>
                         <h3 class="entry-title mb-4"><a href="post-style-1.html">Skip the Pie—Make This Pumpkin
                                 Layer Cake With Brown Sugar Frosting Instead</a></h3>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="entry-content">
                         <span class="entry-meta">
-                            <a href="category.html">LifeStyle</a>
+                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
                         </span>
                         <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
                                 interesting things will happen</a></h3>
@@ -133,7 +133,7 @@
                     </div>
                     <div class="entry-content">
                         <span class="entry-meta">
-                            <a href="category.html">LifeStyle</a>
+                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
                         </span>
                         <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
                                 interesting things will happen</a></h3>
@@ -154,7 +154,7 @@
                     </div>
                     <div class="entry-content">
                         <span class="entry-meta">
-                            <a href="category.html">LifeStyle</a>
+                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
                         </span>
                         <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
                                 interesting things will happen</a></h3>

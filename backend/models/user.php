@@ -204,11 +204,17 @@ class User
             return false;
         }
     }
+    public function name()
+    {
+        return  $this->last_name . " " . $this->first_name;
+       
+    }
 
-    public function stories($limit = 10)
+    public function stories($limit = 10, $published = false)
     {
         connect();
-        $sql =  "SELECT * FROM stories where user_id = " . $this->id . "  ORDER BY created_at DESC LIMIT $limit";
+        $publish_query = $published ? " AND published = 1 " : "";
+        $sql =  "SELECT * FROM stories where user_id = " . $this->id . $publish_query .  "  ORDER BY created_at DESC LIMIT $limit";
         global $db;
         $result = $db->query($sql);
         $stories = [];
@@ -221,7 +227,7 @@ class User
             return $stories;
         } else {
             close();
-            return false;
+            return [];
         }
     }
 

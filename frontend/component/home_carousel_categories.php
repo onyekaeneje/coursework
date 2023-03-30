@@ -11,7 +11,7 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-8 col-sm-10 mx-auto text-center">
-                            <a class="entry-meta text-white" href="category.html"><?php echo $category->name; ?></a>
+                            <a class="entry-meta text-white" href="<?php echo WEBPATH ?>/frontend/pages/category.php"><?php echo $category->name; ?></a>
                             <h1 class="my-5"><a class="text-white" href="post-style-1.html"><?php echo $category->description; ?></a></h1>
                             <a href="post-style-1.html" class="btn-unfill text-white"><?php echo $category->cta; ?><i class="fa fa-arrow-right"></i></a>
                         </div>

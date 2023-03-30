@@ -88,6 +88,13 @@
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="<?php echo WEBPATH ?>/frontend/pages/create.php">Upload Story</a></li>
                                             <li><a class="dropdown-item" href="<?php echo WEBPATH ?>/frontend/pages/story.php">View Story</a></li>
+                                            <?php 
+                                            if (isset($_SESSION['id'])){
+                                                $user = User::get($_SESSION['id']);
+                                                if(isset($user) && $user->role == 'admin'):
+                                            ?>
+                                             <li><a class="dropdown-item" href="<?php echo WEBPATH ?>/frontend/pages/approve.php">Publish Story</a></li>
+                                           <?php endif; }?>
                                             <li><a class="dropdown-item" href="<?php echo WEBPATH ?>/frontend/pages/advert.php">Advertise with us</a>
                                             </li>
                                             <li><a class="dropdown-item" href="<?php echo WEBPATH ?>/frontend/pages/contact.php">Contact Us</a></li>

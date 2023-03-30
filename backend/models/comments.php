@@ -175,6 +175,12 @@ class Comment
             return false;
         }
     }
+    public function date()
+    {
+
+        return
+            date("F jS, Y h:i", strtotime($this->created_at));
+    }
 }
 
 ?>
