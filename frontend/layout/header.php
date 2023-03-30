@@ -1,4 +1,3 @@
-
 <head>
     <meta charset="utf-8">
     <title>StorySpotter - World of Stories</title>
@@ -19,16 +18,17 @@
     <link rel="stylesheet" href="<?php echo WEBPATH ?>/frontend/assets/css/animate.min.css">
     <link rel="stylesheet" href="<?php echo WEBPATH ?>/frontend/assets/css/fontawesome.css">
     <link rel="stylesheet" href="<?php echo WEBPATH ?>/frontend/assets/css/style.css">
+    <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
 </head>
 
 <body>
 
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="preloader">
             <span></span>
             <span></span>
         </div>
-    </div>
+    </div> -->
     <header id="header" class="header header-default dark-header">
         <div class="main-overlay"></div>
         <div class="topbar">
@@ -134,7 +134,8 @@
                             </div>
                         </nav>
 
-                        <!-- <a href="https://www.instagram.com/" class="nav-heart"><img src="<?php //echo WEBPATH ?>/frontend/assets/images/icon-3.png" alt=""></a> -->
+                        <!-- <a href="https://www.instagram.com/" class="nav-heart"><img src="<?php //echo WEBPATH 
+                                                                                                ?>/frontend/assets/images/icon-3.png" alt=""></a> -->
                     </div>
                 </div>
             </div>

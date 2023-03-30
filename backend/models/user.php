@@ -2,7 +2,8 @@
 include_once dirname(__DIR__). "/connection.php";
 include_once "role.php";
 include_once "location.php";
-
+include_once "comments.php";
+include_once "story.php";
 
 
 class User
@@ -21,7 +22,7 @@ class User
         $this->bio =
             !empty($item['bio']) ? $item['bio'] : null;
         $this->image =
-            !empty($item['image']) ? $item['image'] : null;
+            !empty($item['image']) ? $item['image'] : "author.png";
         $this->location_id =
             !empty($item['location_id']) ? $item['location_id'] : null;
         $this->gender =
@@ -108,6 +109,7 @@ class User
         global $db;
         $date = date("Y/m/d h:i:sa");
         $followers = 0;
+        $user['image'] = empty($user['image']) ? "author.png" :  $user['image'];
         $stmt = $db->prepare("INSERT INTO users (last_name, first_name, role_id, telephone, bio, image, location_id, created_at, followers, password, email_verified_at, gender, email, dob) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssisssisisssss", $user['last_name'], $user['first_name'], $user['role_id'], $user['telephone'], $user['bio'], $user['image'], $user['location_id'], $date, $followers, $user['password'], $user['email_verified_at'], $user['gender'], $user['email'], $user['dob']);
         try {
@@ -197,6 +199,46 @@ class User
                 break;
             }
             return $result;
+        } else {
+            close();
+            return false;
+        }
+    }
+
+    public function stories($limit = 10)
+    {
+        connect();
+        $sql =  "SELECT * FROM stories where user_id = " . $this->id . "  ORDER BY created_at DESC LIMIT $limit";
+        global $db;
+        $result = $db->query($sql);
+        $stories = [];
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $story =  Story::get($row['id']);
+                array_push($stories, $story);
+            }
+            return $stories;
+        } else {
+            close();
+            return false;
+        }
+    }
+
+    public function comments()
+    {
+        connect();
+        $sql =  "SELECT * FROM comments where user_id = " . $this->id . " ORDER BY created_at ";
+        global $db;
+        $result = $db->query($sql);
+        $comments = [];
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $comment = Comment::get($row['id']);
+                array_push($comments, $comment);
+            }
+            return $comments;
         } else {
             close();
             return false;

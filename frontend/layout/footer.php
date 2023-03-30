@@ -114,7 +114,7 @@
 <script src="<?php echo WEBPATH ?>/frontend/assets/js/jquery.scrollUp.min.js" type="9714ea802290c6223dcbf29b-text/javascript"></script>
 <script src="<?php echo WEBPATH ?>/frontend/assets/js/main.js" defer type="9714ea802290c6223dcbf29b-text/javascript"></script>
 <script src="<?php echo WEBPATH ?>/frontend/assets/js/rocket-loader.min.js" data-cf-settings="9714ea802290c6223dcbf29b-|49" defer=""></script>
-<script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+
 </body>
 
 </html>

@@ -3,7 +3,7 @@
         <div class="row gx-lg-5">
             <div class="col-lg-8 pr-xl-4">
                 <div class="entry-header">
-                    <h1 class="display-6">Featured Stories</h1>
+                    <h1 class="display-6 py-2">Featured Stories</h1>
                 </div>
                 <div class=" single-entry featured-entry text-center wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
                     <div class="entry-thumb mb-5">
