@@ -8,6 +8,9 @@ $root = $_SERVER['DOCUMENT_ROOT'] . "/coursework";
 $GLOBALS['db'] = $db;
 define('ROOTPATH', __DIR__);
 define('WEBPATH', "http://". $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']));
+include_once ROOTPATH . "/backend/models/user.php";
+include_once ROOTPATH . "/backend/models/story.php";
+include_once ROOTPATH . "/backend/models/category.php";
 
 include_once "frontend/layout/header.php";
 include_once "frontend/component/home_carousel_categories.php";

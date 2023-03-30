@@ -16,8 +16,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
 $user = User::get($_SESSION["id"]);
 
 $role = $user->role()->name;
-$email = $password = $success_msg = "";
-$title_err = $category_err = $image_err = $content_err = $description_err = $image_err = $post_err = "";
+ $error_msg = $success_msg = "";
 $site_err = "";
 
 if ($role != "admin") {
@@ -27,28 +26,23 @@ if ($role != "admin") {
 
 
 // Processing form data when form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($site_err)) {
+if ($_SERVER["REQUEST_METHOD"] == "GET"  && isset($_GET['action']) && isset($_GET['story_id'])) {
 
-    $image = upload_image($_FILES["image"]);
-
-    if (!$image['status']) {
-        $image_err = $image['error'];
-    } else {
-        $_POST["image"] = $image['success'];
-        $_POST["user_id"] = $user->id;
-    }
-
-
-    //validate all
-    if (empty($image_err) && empty($content_err) && empty($post_err)) {
-
-        $story = Story::create($_POST);
-
-        if (isset($story)) {
-            $success_msg = "Story has been posted successfully";
-            $_POST = [];
-            header("location: create.php");
+    if ($_GET['action'] == "delete") {
+        $story_to_delete = Story::get($_GET['story_id']);
+        $result = $story_to_delete->delete();
+        if($result == true){
+            $success_msg = "Story <b>ID".$_GET['story_id']."</b> was deleted successfully";  
         }
+        else $error_msg = $result;
+    } else if ($_GET['action'] == "publish") {
+        $story_unpublish = Story::get($_GET['story_id']);
+        $story_unpublish->published = true;
+        $result = $story_unpublish->update();
+       
+        if ($result == true) {
+            $success_msg = "Story <b>ID". $_GET['story_id']."</b> was published successfully";
+        } else $error_msg = $result;
     }
 }
 ?>
@@ -92,12 +86,18 @@ include_once ROOTPATH . "/frontend/layout/header.php";
                             </div>
 
                         <?php } ?>
+                        <?php if (!empty($error_msg)) { ?>
+                            <div class="alert alert-danger">
+                                <p class="mt-2 text-center "><?php echo $error_msg; ?></p>
+                            </div>
+
+                        <?php } ?>
                         <?php
                         $total_rows = Story::num_rows();
                         $rows = empty($_GET['entries']) ? 5 : $_GET['entries'];
                         $pages = (int) $total_rows / (int) $rows;
                         $current_page = empty($_GET['current_page']) ? 1 : $_GET['current_page'];
-                        $start = ((((int) $current_page * $rows) - $rows) ) + 1;
+                        $start = ((((int) $current_page * $rows) - $rows)) + 1;
                         $stories = Story::all($rows, false, $start);
 
                         ?>
@@ -121,8 +121,8 @@ include_once ROOTPATH . "/frontend/layout/header.php";
                                             <td><?php echo $story->author() ?></td>
                                             <td><?php echo $story->date() ?></td>
                                             <td>
-                                                <input type="checkbox" <?php !empty($story->published) ? 'checked' : false ?> name="published" id="published"><label class="p-2">
-                                                    
+                                                <input type="checkbox" <?php echo !empty($story->published) ? 'checked' : false ?> name="published" id="published"><label class="p-2">
+
                                             </td>
                                             <td>
                                                 <span class="text-primary"><a class="text-primary" href="<?php echo WEBPATH ?>/frontend/pages/story.php?id=<?php echo $story->id ?>">view</a> </span>
@@ -142,7 +142,7 @@ include_once ROOTPATH . "/frontend/layout/header.php";
                                 <nav aria-label="...">
                                     <ul class="pagination">
                                         <li class="page-item <?php echo empty($_GET['current_page']) || $_GET['current_page'] == 1  ? 'disabled' : "" ?>">
-                                            <a class="page-link" href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?current_page=" .( empty($_GET['current_page']) ? 1 : ((int)$_GET['current_page'] +  1)) . "&entries=10"; ?>" tabindex="-1">Previous</a>
+                                            <a class="page-link" href="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?current_page=" . (empty($_GET['current_page']) ? 1 : ((int)$_GET['current_page'] +  1)) . "&entries=10"; ?>" tabindex="-1">Previous</a>
                                         </li>
                                         <?php for ($i = 1; $i <= $pages; $i++) :  ?>
                                             <li class="page-item <?php echo $i == $current_page ? " active" : "gg" ?>">

@@ -91,7 +91,7 @@
                                             <?php 
                                             if (isset($_SESSION['id'])){
                                                 $user = User::get($_SESSION['id']);
-                                                if(isset($user) && $user->role == 'admin'):
+                                                if(isset($user) && $user->role()->name == 'admin'):
                                             ?>
                                              <li><a class="dropdown-item" href="<?php echo WEBPATH ?>/frontend/pages/approve.php">Publish Story</a></li>
                                            <?php endif; }?>
@@ -151,5 +151,4 @@
 
     <?php
 
-    $data = "Chukwuebuka Onyekelu E";
     ?>

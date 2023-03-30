@@ -56,10 +56,8 @@ if (isset($_GET['id']) &&  $_GET['id'] != "") {
         $site_err = "Sorry we could not find this story";
     }
 } else {
-    // echo he
-    // header("location: category.php");
-}
 
+}
 ?>
 
 
@@ -139,19 +137,19 @@ include_once ROOTPATH . "/frontend/layout/header.php";
                         <?php
                         $stories = Story::all(3, true);
                         if (count($stories) > 0) {
-                            foreach ($stories as $index => $story) : ?>
+                            foreach ($stories as $index => $value) : ?>
                                 <div class="col-lg-4 col-sm-4">
 
                                     <div class="single-entry mb-5">
                                         <div class="entry-thumb mb-2">
-                                            <a href="p<?php echo WEBPATH ?>/frontend/pages/story.php?id=<?php echo $story->id ?>l"> <img src="<?php echo WEBPATH ?>/frontend/assets/images/<?php echo $story->category()->image ?>" class="img-fluid" alt="blog"></a>
+                                            <a href="p<?php echo WEBPATH ?>/frontend/pages/story.php?id=<?php echo $value->id ?>l"> <img src="<?php echo WEBPATH ?>/frontend/assets/images/<?php echo $value->category()->image ?>" class="img-fluid" alt="blog"></a>
                                             <div class="entry-share d-flex">
                                                 <a href="#"><i class="fa fa-heart"></i></a>
                                                 <a href="#"><i class="fa fa-link"></i></a>
                                             </div>
                                         </div>
                                         <div class="entry-content">
-                                            <h3 class="entry-title mb-4"><a href="<?php echo WEBPATH ?>/frontend/pages/story.php?id=<?php echo $story->id ?>"></a>
+                                            <h3 class="entry-title mb-4"><a href="<?php echo WEBPATH ?>/frontend/pages/story.php?id=<?php echo $value->id ?>"></a>
                                                 <?php echo $story->title ?>
                                             </h3>
                                         </div>

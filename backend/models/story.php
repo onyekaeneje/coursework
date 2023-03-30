@@ -24,7 +24,7 @@ class Story
         $this->location_id =
             !empty($item['location_id']) ? $item['location_id'] : null;
         $this->published =
-            !empty($item['published']) ? $item['published'] : null;
+            !empty($item['published']) ? $item['published'] : 0;
         $this->views =
             !empty($item['views']) ? $item['views'] : null;
         $this->likes =
@@ -36,11 +36,11 @@ class Story
         $this->timestamp = date("Y/m/d h:i:sa");
     }
 
-    static function all($limit = 10, $published = false, $offset = 0)
+    static function all($limit = 10, $published = false, $offset = 0, $order = "DESC")
     {
         connect();
         $publish_query = $published ? " where published = 1 " : " ";
-        $sql =  "SELECT * FROM stories" . $publish_query . " ORDER BY created_at DESC LIMIT $limit OFFSET $offset" ;
+        $sql =  "SELECT * FROM stories" . $publish_query . " ORDER BY created_at $order LIMIT $limit OFFSET $offset" ;
         global $db;
         $result = $db->query($sql);
         $stories = [];

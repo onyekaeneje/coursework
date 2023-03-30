@@ -5,180 +5,55 @@
                 <div class="entry-header">
                     <h1 class="display-6 py-2">Featured Stories</h1>
                 </div>
-                <div class=" single-entry featured-entry text-center wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+                <?php
+                $order = isset($_GET['order']) ? $_GET['order'] : 'DESC';
+                $stories = Story::all(10, true, 0, $order);
+                if (count($stories) > 0) {
+                    foreach ($stories as $index => $story) : ?>
+
+                <div class=" single-entry featured-entry text-center wow fadeInUp2" data-wow-offset="30"
+                    data-wow-duration="1.5s" data-wow-delay="0.15s">
                     <div class="entry-thumb mb-5">
-                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/feature-6.jpg" class="img-fluid" alt="blog"></a>
+                        <a href="<?php echo WEBPATH ?>/frontend/pages/story.php?id=<?php echo $story->id ?>"> <img
+                                src="<?php echo WEBPATH ?>/frontend/assets/images/story/<?php echo $story->image ?>"
+                                class="img-fluid" alt="blog"></a>
                         <div class="entry-share d-flex">
                             <a href="#"><i class="fa fa-heart"></i></a>
-                            <a href="post-style-1.html"><i class="fa fa-link"></i></a>
+                            <a href="<?php echo WEBPATH ?>/frontend/pages/story.php?id=<?php echo $story->id ?>"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
                     <div class="entry-content px-3">
                         <span class="entry-meta">
-                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
+                            <a
+                                href="<?php echo WEBPATH ?>/frontend/pages/category.php"><?php echo $story->category()->name ?></a>
                         </span>
-                        <h3 class="entry-title mb-4"><a href="post-style-1.html">Skip the Pie—Make This Pumpkin
-                                Layer Cake With Brown Sugar Frosting Instead</a></h3>
-                        <span class="fs-sm">by <a href="author.html">Lora Palmer</a></span>
+                        <h3 class="entry-title mb-4"><a
+                                href="<?php echo WEBPATH ?>/frontend/pages/story.php?id=<?php echo $story->id ?>"><?php echo $story->title ?></a>
+                        </h3>
+                        <span class="fs-sm">by <a href="#"><?php echo $story->author() ?></a></span>
                     </div>
                 </div>
-                <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
-                    <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-1.jpg" class="img-fluid" alt="blog"></a>
-                        <div class="entry-share d-flex">
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                            <a href="post-style-1.html"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="entry-meta">
-                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
-                        </span>
-                        <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
-                                interesting things will happen</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
-                        </p>
-                        <a class="btn-unfill" href="post-style-1.html">
-                            Take a Look <i class="fa fa-arrow-right"></i>
-                        </a>
+
+                <?php endforeach;
+                } else { ?>
+                <div class=" d-flex align-items-center mb-5">
+                    <div class="ps-3 text-center">
+                        <p class="fs-ms text-muted text-center"> No recent published stories</p>
                     </div>
                 </div>
-                <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
-                    <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-4.jpg" class="img-fluid" alt="blog"></a>
-                        <div class="entry-share d-flex">
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                            <a href="post-style-1.html"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="entry-meta">
-                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
-                        </span>
-                        <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
-                                interesting things will happen</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
-                        </p>
-                        <a class="btn-unfill" href="post-style-1.html">
-                            Take a Look <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
-                    <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-5.jpg" class="img-fluid" alt="blog"></a>
-                        <div class="entry-share d-flex">
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                            <a href="post-style-1.html"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="entry-meta">
-                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
-                        </span>
-                        <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
-                                interesting things will happen</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
-                        </p>
-                        <a class="btn-unfill" href="post-style-1.html">
-                            Take a Look <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="single-entry featured-entry text-center wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                    <div class="entry-thumb mb-5">
-                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/feature-7.jpg" class="img-fluid" alt="blog"></a>
-                        <div class="entry-share d-flex">
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                            <a href="post-style-1.html"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="entry-content px-3">
-                        <span class="entry-meta">
-                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
-                        </span>
-                        <h3 class="entry-title mb-4"><a href="post-style-1.html">Skip the Pie—Make This Pumpkin
-                                Layer Cake With Brown Sugar Frosting Instead</a></h3>
-                        <span class="fs-sm">by <a href="author.html">Lora Palmer</a></span>
-                    </div>
-                </div>
-                <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
-                    <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-6.jpg" class="img-fluid" alt="blog"></a>
-                        <div class="entry-share d-flex">
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                            <a href="post-style-1.html"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="entry-meta">
-                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
-                        </span>
-                        <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
-                                interesting things will happen</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
-                        </p>
-                        <a class="btn-unfill" href="post-style-1.html">
-                            Take a Look <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
-                    <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-7.jpg" class="img-fluid" alt="blog"></a>
-                        <div class="entry-share d-flex">
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                            <a href="post-style-1.html"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="entry-meta">
-                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
-                        </span>
-                        <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
-                                interesting things will happen</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
-                        </p>
-                        <a class="btn-unfill" href="post-style-1.html">
-                            Take a Look <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="single-entry list-entry wow fadeInUp2" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.30s">
-                    <div class="entry-thumb">
-                        <a href="post-style-1.html"> <img src="/coursework/frontend/assets/images/b-2.jpg" class="img-fluid" alt="blog"></a>
-                        <div class="entry-share d-flex">
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                            <a href="post-style-1.html"><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="entry-content">
-                        <span class="entry-meta">
-                            <a href="<?php echo WEBPATH ?>/frontend/pages/category.php">LifeStyle</a>
-                        </span>
-                        <h3 class="entry-title mb-4"><a href="post-style-1.html">Do interesting things, and
-                                interesting things will happen</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
-                        </p>
-                        <a class="btn-unfill" href="post-style-1.html">
-                            Take a Look <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+                <?php }
+                ?>
+
+
                 <div class="entry-navigation my-5 pt-5 text-center">
-                    <span><a href="#">Newer</a></span>
-                    <span><a href="#">Older</a></span>
+                    <span><a href="<?php echo WEBPATH ?>/?order=DESC">Newer</a></span>
+                    <span><a href="<?php echo WEBPATH ?>/?order=ASC">Older</a></span>
                 </div>
             </div>
 
             <div class="col-lg-4 sidebar left-line ps-5">
-                <div class="widget author text-center">
-                    <a href="#"><img class="rounded-circle" width="190" src="/coursework/frontend/assets/images/author.png" alt="author"></a>
-                    <h5 class="my-4"><?php echo $data ?></h5>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                    </p>
-                    <!-- <img src="/coursework/frontend/assets/images/sign3.png" alt="Author"> -->
-                </div>
+
 
                 <div class="widget add">
                     <h2>Advertisement</h2>
@@ -189,7 +64,8 @@
                         <h2 id="recently_viewed">Recently Viewed</h2>
                     </div>
                     <div class=" d-flex align-items-center mb-5">
-                        <a href="post-style-1.html"><img class="rounded-circle" src="/coursework/frontend/assets/images/rb-2.jpg" width="86" alt="Post image">
+                        <a href="post-style-1.html"><img class="rounded-circle"
+                                src="/coursework/frontend/assets/images/rb-2.jpg" width="86" alt="Post image">
                         </a>
                         <div class="ps-3">
                             <h4 class="title-sm">
@@ -200,7 +76,8 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-5">
-                        <a href="post-style-1.html"><img class="rounded-circle" src="/coursework/frontend/assets/images/rb-1.jpg" width="86" alt="Post image">
+                        <a href="post-style-1.html"><img class="rounded-circle"
+                                src="/coursework/frontend/assets/images/rb-1.jpg" width="86" alt="Post image">
                         </a>
                         <div class="ps-3">
                             <h4 class="title-sm">
@@ -211,7 +88,8 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-5">
-                        <a href="post-style-1.html"><img class="rounded-circle" src="/coursework/frontend/assets/images/rb-1.jpg" width="86" alt="Post image">
+                        <a href="post-style-1.html"><img class="rounded-circle"
+                                src="/coursework/frontend/assets/images/rb-1.jpg" width="86" alt="Post image">
                         </a>
                         <div class="ps-3">
                             <h4 class="title-sm">
@@ -222,7 +100,8 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-5">
-                        <a href="post-style-1.html"><img class="rounded-circle" src="/coursework/frontend/assets/images/rb-1.jpg" width="86" alt="Post image">
+                        <a href="post-style-1.html"><img class="rounded-circle"
+                                src="/coursework/frontend/assets/images/rb-1.jpg" width="86" alt="Post image">
                         </a>
                         <div class="ps-3">
                             <h4 class="title-sm">
@@ -238,13 +117,21 @@
                         <h2>Categories</h2>
                     </div>
                     <ul>
+                        <?php
+                        $categories = Category::all();
+                        if (count($categories) > 0) {
+                            foreach ($categories as $index => $category) : ?>
+
                         <li>
-                            <a href="#"><span>01</span> Life Style</a>
+                            <a href="#"><span><?php echo ++$index ?></span><?php echo $category->name ?></a>
                         </li>
-                        <li>
-                            <a href="#"><span>02</span> Fashion</a>
+                        <?php endforeach;
+                        } else { ?>
+                        <li class="ps-3 text-center">
+                            <p class="fs-ms text-muted text-center"> No categories</p>
                         </li>
-                        <li>
+                        <?php }
+                        ?>
                     </ul>
                 </div>
             </div>
