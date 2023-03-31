@@ -81,7 +81,7 @@ document.getElementById("signup").classList.add("active");
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"
                         enctype="multipart/form-data">
                         <h2 class="display-4">Write a story</h2>
-                        <?php if (isset($site_err)) : ?>
+                        <?php if (!empty($site_err)) : ?>
                         <div class="alert alert-danger">
                             <p class="mt-2 text-center"><?php echo $site_err ?></p>
                         </div>
