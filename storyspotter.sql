@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2023 at 06:24 AM
+-- Generation Time: Mar 31, 2023 at 06:39 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -63,31 +63,6 @@ CREATE TABLE `comments` (
   `user_id` int(11) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `comments`
---
-
-INSERT INTO `comments` (`id`, `story_id`, `content`, `likes`, `user_id`, `created_at`) VALUES
-(3, 1, 'super nice', 0, 1, '2023-03-27 09:13:57'),
-(4, 1, 'liuytre', 0, 1, '2023-03-30 08:53:38'),
-(5, 1, 'liuytre', 0, 1, '2023-03-30 08:54:01'),
-(6, 1, '\';olkjhgfhjkl', 0, 1, '2023-03-30 08:54:19'),
-(7, 1, 'yraegh', 0, 1, '2023-03-30 09:00:22'),
-(8, 1, 'yraegh', 0, 1, '2023-03-30 09:01:19'),
-(9, 1, 'yraegh', 0, 1, '2023-03-30 09:01:45'),
-(10, 1, 'yraegh', 0, 1, '2023-03-30 09:02:09'),
-(11, 1, 'likujhgfds', 0, 1, '2023-03-30 09:03:43'),
-(12, 1, ';lkjhg', 0, 1, '2023-03-30 09:04:20'),
-(13, 1, '[POIUYHT', 0, 1, '2023-03-30 09:05:14'),
-(14, 1, ';LKJHG', 0, 1, '2023-03-30 09:07:20'),
-(15, 1, 'dsoksdjsd', 0, 1, '2023-03-30 09:08:28'),
-(16, 1, 'dsoksdjsd', 0, 1, '2023-03-30 09:09:15'),
-(17, 1, 'dsoksdjsd', 0, 1, '2023-03-30 09:09:46'),
-(18, 1, 'dsoksdjsd', 0, 1, '2023-03-30 09:10:42'),
-(19, 1, 'kljhgfd', 0, 1, '2023-03-30 09:11:20'),
-(20, 1, 'kljhgfd', 0, 1, '2023-03-30 09:13:08'),
-(21, 1, 'l;kjhgf', 0, 1, '2023-03-30 09:13:29');
 
 -- --------------------------------------------------------
 
@@ -236,51 +211,7 @@ INSERT INTO `stories` (`id`, `user_id`, `title`, `description`, `category_id`, `
 (18786, 1, 'how many now', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png8', 0, 0, 0, '2023-03-27 05:52:09', '0000-00-00 00:00:00'),
 (18787, 1, 'how many now', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png8', 0, 0, 0, '2023-03-27 05:52:09', '0000-00-00 00:00:00'),
 (18788, 1, 'hia', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png8', 0, 0, 0, '2023-03-27 06:03:34', '0000-00-00 00:00:00'),
-(18789, 1, 'hia ka', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png8', 0, 0, 0, '2023-03-27 06:14:20', '0000-00-00 00:00:00'),
-(18790, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 08:57:44', '0000-00-00 00:00:00'),
-(18791, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 08:57:55', '0000-00-00 00:00:00'),
-(18792, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 08:58:44', '0000-00-00 00:00:00'),
-(18793, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 08:59:01', '0000-00-00 00:00:00'),
-(18794, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 08:59:24', '0000-00-00 00:00:00'),
-(18795, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 09:00:28', '0000-00-00 00:00:00'),
-(18796, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 09:01:03', '0000-00-00 00:00:00'),
-(18797, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:09:38', '0000-00-00 00:00:00'),
-(18798, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:10:14', '0000-00-00 00:00:00'),
-(18799, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:11:12', '0000-00-00 00:00:00'),
-(18800, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:11:31', '0000-00-00 00:00:00'),
-(18801, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:15:00', '0000-00-00 00:00:00'),
-(18802, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:15:23', '0000-00-00 00:00:00'),
-(18803, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:18:32', '0000-00-00 00:00:00'),
-(18804, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:19:02', '0000-00-00 00:00:00'),
-(18805, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:35:16', '0000-00-00 00:00:00'),
-(18806, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:42:24', '0000-00-00 00:00:00'),
-(18807, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:43:00', '0000-00-00 00:00:00'),
-(18808, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:43:53', '0000-00-00 00:00:00'),
-(18809, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:45:24', '0000-00-00 00:00:00'),
-(18810, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:45:42', '0000-00-00 00:00:00'),
-(18811, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:46:35', '0000-00-00 00:00:00'),
-(18812, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:46:40', '0000-00-00 00:00:00'),
-(18813, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:47:02', '0000-00-00 00:00:00'),
-(18814, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:52:04', '0000-00-00 00:00:00'),
-(18815, 8, 'SSJJSJSJ', NULL, 1, '<p>SSJSKJSKJ</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 0, '2023-03-30 05:52:24', '0000-00-00 00:00:00'),
-(18816, 8, 'SSJJSJSJ', NULL, 1, '<p>SSJSKJSKJ</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 0, '2023-03-30 05:53:08', '0000-00-00 00:00:00'),
-(18817, 8, 'SSSSSSKKL', NULL, 2, '<p>KJSKJSKJS</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 0, '2023-03-30 05:54:17', '0000-00-00 00:00:00'),
-(18818, 8, 'SSSSSSKKL', NULL, 2, '<p>KJSKJSKJS</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 0, '2023-03-30 05:55:51', '0000-00-00 00:00:00'),
-(18819, 8, 'SSSSSSKKL', NULL, 2, '<p>KJSKJSKJS</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 0, '2023-03-30 05:55:57', '0000-00-00 00:00:00'),
-(18820, 8, 'SSSSSSKKL', NULL, 2, '<p>KJSKJSKJS</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 1, '2023-03-30 05:56:04', '2023-03-30 03:33:08'),
-(18821, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 1, '2023-03-30 05:56:35', '2023-03-30 03:28:51'),
-(18823, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:58:03', '0000-00-00 00:00:00'),
-(18824, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:19:01', '0000-00-00 00:00:00'),
-(18825, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:19:45', '0000-00-00 00:00:00'),
-(18826, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:20:42', '0000-00-00 00:00:00'),
-(18827, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:20:48', '0000-00-00 00:00:00'),
-(18828, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:21:09', '0000-00-00 00:00:00'),
-(18829, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:21:32', '0000-00-00 00:00:00'),
-(18830, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:21:52', '0000-00-00 00:00:00'),
-(18831, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:22:15', '0000-00-00 00:00:00'),
-(18832, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:22:20', '0000-00-00 00:00:00'),
-(18833, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:22:21', '0000-00-00 00:00:00'),
-(18834, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:22:22', '0000-00-00 00:00:00');
+(18789, 1, 'hia ka', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png8', 0, 0, 0, '2023-03-27 06:14:20', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -313,10 +244,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `last_name`, `first_name`, `gender`, `dob`, `email`, `image`, `telephone`, `location_id`, `bio`, `followers`, `role_id`, `password`, `email_verified_at`, `created_at`) VALUES
 (1, 'David', 'Robinson', 'male', '2013-03-05', 'davidrobinson5616@yahoo.com', 'author-4.png', '+23480999999', 1, 'I am energetic author. I write stories and novels for fun', 0, 5, '$2y$10$6EavPa4uiLX4hijt8B4YlO9eOIhc4ez360AStTNNJ8DfDL6vxd29m', NULL, '2023-03-27 22:33:21'),
 (2, 'Mary', 'Robben', 'female', '2014-03-14', 'maryrobben@gamil.com', 'author.png', '2347882828828', 1, 'I love to read stories', 0, 3, 'secret', NULL, '2023-03-27 22:33:21'),
-(3, 'Eneje ', 'Everistus', 'male', '2013-03-14', 'enejeeveristus@gmail.com', NULL, '+552525525252', 1, 'I am the owner of storyspotter website.', 0, 5, 'secret', NULL, '2023-03-27 22:33:21'),
-(8, 'Onyekelu', 'Chukwuebuka', NULL, NULL, 'CONYEKELU@YAHOO.COMg', NULL, NULL, NULL, NULL, 0, 4, '$2y$10$6EavPa4uiLX4hijt8B4YlO9eOIhc4ez360AStTNNJ8DfDL6vxd29m', NULL, '2023-03-28 06:00:57'),
-(9, 'Onyekelu', 'Chukwuebuka', NULL, NULL, 'CONYEKELU@YAHOO.COMs', NULL, NULL, NULL, NULL, 0, 4, '$2y$10$6EavPa4uiLX4hijt8B4YlO9eOIhc4ez360AStTNNJ8DfDL6vxd29m', NULL, '2023-03-29 09:03:55'),
-(10, 'Onyekelu', 'Chukwuebuka', NULL, NULL, 'CONYEKELU@YAHOO.COMii', NULL, NULL, NULL, NULL, 0, 3, '$2y$10$6EavPa4uiLX4hijt8B4YlO9eOIhc4ez360AStTNNJ8DfDL6vxd29m', NULL, '2023-03-29 09:13:40');
+(3, 'Eneje ', 'Everistus', 'male', '2013-03-14', 'enejeeveristus@gmail.com', NULL, '+552525525252', 1, 'I am the owner of storyspotter website.', 0, 5, 'secret', NULL, '2023-03-27 22:33:21');
 
 --
 -- Indexes for dumped tables
