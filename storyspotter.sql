@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2023 at 11:37 AM
+-- Generation Time: Mar 31, 2023 at 06:24 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -69,7 +69,25 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `story_id`, `content`, `likes`, `user_id`, `created_at`) VALUES
-(3, 1, 'super nice', 0, 1, '2023-03-27 09:13:57');
+(3, 1, 'super nice', 0, 1, '2023-03-27 09:13:57'),
+(4, 1, 'liuytre', 0, 1, '2023-03-30 08:53:38'),
+(5, 1, 'liuytre', 0, 1, '2023-03-30 08:54:01'),
+(6, 1, '\';olkjhgfhjkl', 0, 1, '2023-03-30 08:54:19'),
+(7, 1, 'yraegh', 0, 1, '2023-03-30 09:00:22'),
+(8, 1, 'yraegh', 0, 1, '2023-03-30 09:01:19'),
+(9, 1, 'yraegh', 0, 1, '2023-03-30 09:01:45'),
+(10, 1, 'yraegh', 0, 1, '2023-03-30 09:02:09'),
+(11, 1, 'likujhgfds', 0, 1, '2023-03-30 09:03:43'),
+(12, 1, ';lkjhg', 0, 1, '2023-03-30 09:04:20'),
+(13, 1, '[POIUYHT', 0, 1, '2023-03-30 09:05:14'),
+(14, 1, ';LKJHG', 0, 1, '2023-03-30 09:07:20'),
+(15, 1, 'dsoksdjsd', 0, 1, '2023-03-30 09:08:28'),
+(16, 1, 'dsoksdjsd', 0, 1, '2023-03-30 09:09:15'),
+(17, 1, 'dsoksdjsd', 0, 1, '2023-03-30 09:09:46'),
+(18, 1, 'dsoksdjsd', 0, 1, '2023-03-30 09:10:42'),
+(19, 1, 'kljhgfd', 0, 1, '2023-03-30 09:11:20'),
+(20, 1, 'kljhgfd', 0, 1, '2023-03-30 09:13:08'),
+(21, 1, 'l;kjhgf', 0, 1, '2023-03-30 09:13:29');
 
 -- --------------------------------------------------------
 
@@ -141,8 +159,8 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`) VALUES
-(3, 'story_seeker'),
-(4, 'story_teller'),
+(3, 'Story seeker'),
+(4, 'Story teller'),
 (5, 'admin');
 
 -- --------------------------------------------------------
@@ -196,7 +214,7 @@ CREATE TABLE `stories` (
 --
 
 INSERT INTO `stories` (`id`, `user_id`, `title`, `description`, `category_id`, `content`, `location_id`, `image`, `views`, `likes`, `published`, `created_at`, `updated_at`) VALUES
-(1, 1, ' The Lottery', NULL, 7, 'The morning of June 27th was clear and sunny, with the fresh warmth of a full-summer day; the flowers were blossoming profusely and the grass was richly green. The people of the village began to gather in the square, between the post office and the bank, around ten o’clock; in some towns there were so many people that the lottery took two days and had to be started on June 20th, but in this village, where there were only about three hundred people, the whole lottery took less than two hours, so it could begin at ten o’clock in the morning and still be through in time to allow the villagers to get home for noon dinner.\r\n\r\nThe children assembled first, of course. School was recently over for the summer, and the feeling of liberty sat uneasily on most of them; they tended to gather together quietly for a while before they broke into boisterous play, and their talk was still of the classroom and the teacher, of books and reprimands. Bobby Martin had already stuffed his pockets full of stones, and the other boys soon followed his example, selecting the smoothest and roundest stones; Bobby and Harry Jones and Dickie Delacroix—the villagers pronounced this name “Dellacroy”—eventually made a great pile of stones in one corner of the square and guarded it against the raids of the other boys. The girls stood aside, talking among themselves, looking over their shoulders at the boys, and the very small children rolled in the dust or clung to the hands of their older brothers or sisters.\r\n\r\nSoon the men began to gather, surveying their own children, speaking of planting and rain, tractors and taxes. They stood together, away from the pile of stones in the corner, and their jokes were quiet and they smiled rather than laughed. The women, wearing faded house dresses and sweaters, came shortly after their menfolk. They greeted one another and exchanged bits of gossip as they went to join their husbands. Soon the women, standing by their husbands, began to call to their children, and the children came reluctantly, having to be called four or five times. Bobby Martin ducked under his mother’s grasping hand and ran, laughing, back to the pile of stones. His father spoke up sharply, and Bobby came quickly and took his place between his father and his oldest brother.\r\n\r\nThe lottery was conducted—as were the square dances, the teen club, the Halloween program—by Mr. Summers, who had time and energy to devote to civic activities. He was a round-faced, jovial man and he ran the coal business, and people were sorry for him because he had no children and his wife was a scold. When he arrived in the square, carrying the black wooden box, there was a murmur of conversation among the villagers, and he waved and called. “Little late today, folks. ” The postmaster, Mr. Graves, followed him, carrying a three-legged stool, and the stool was put in the center of the square and Mr. Summers set the black box down on it. The villagers kept their distance, leaving a space between themselves and the stool, and when Mr. Summers said, “Some of you fellows want to give me a hand?” there was a hesitation before two men. Mr. Martin and his oldest son, Baxter, came forward to hold the box steady on the stool while Mr. Summers stirred up the papers inside it.\r\n\r\nThe original paraphernalia for the lottery had been lost long ago, and the black box now resting on the stool had been put into use even before Old Man Warner, the oldest man in town, was born. Mr. Summers spoke frequently to the villagers about making a new box, but no one liked to upset even as much tradition as was represented by the black box. There was a story that the present box had been made with some pieces of the box that had preceded it, the one that had been constructed when the first people settled down to make a village here. Every year, after the lottery, Mr. Summers began talking again about a new box, but every year the subject was allowed to fade off without anything’s being done. The black box grew shabbier each year: by now it was no longer completely black but splintered badly along one side to show the original wood color, and in some places faded or stained.', 1, 'unuuu.jpg', 0, 0, 1, '2023-03-26 15:14:01', '2023-03-27 04:28:24'),
+(1, 1, ' The Lottery', NULL, 7, 'The morning of June 27th was clear and sunny, with the fresh warmth of a full-summer day; the flowers were blossoming profusely and the grass was richly green. The people of the village began to gather in the square, between the post office and the bank, around ten o’clock; in some towns there were so many people that the lottery took two days and had to be started on June 20th, but in this village, where there were only about three hundred people, the whole lottery took less than two hours, so it could begin at ten o’clock in the morning and still be through in time to allow the villagers to get home for noon dinner.\r\n\r\nThe children assembled first, of course. School was recently over for the summer, and the feeling of liberty sat uneasily on most of them; they tended to gather together quietly for a while before they broke into boisterous play, and their talk was still of the classroom and the teacher, of books and reprimands. Bobby Martin had already stuffed his pockets full of stones, and the other boys soon followed his example, selecting the smoothest and roundest stones; Bobby and Harry Jones and Dickie Delacroix—the villagers pronounced this name “Dellacroy”—eventually made a great pile of stones in one corner of the square and guarded it against the raids of the other boys. The girls stood aside, talking among themselves, looking over their shoulders at the boys, and the very small children rolled in the dust or clung to the hands of their older brothers or sisters.\r\n\r\nSoon the men began to gather, surveying their own children, speaking of planting and rain, tractors and taxes. They stood together, away from the pile of stones in the corner, and their jokes were quiet and they smiled rather than laughed. The women, wearing faded house dresses and sweaters, came shortly after their menfolk. They greeted one another and exchanged bits of gossip as they went to join their husbands. Soon the women, standing by their husbands, began to call to their children, and the children came reluctantly, having to be called four or five times. Bobby Martin ducked under his mother’s grasping hand and ran, laughing, back to the pile of stones. His father spoke up sharply, and Bobby came quickly and took his place between his father and his oldest brother.\r\n\r\nThe lottery was conducted—as were the square dances, the teen club, the Halloween program—by Mr. Summers, who had time and energy to devote to civic activities. He was a round-faced, jovial man and he ran the coal business, and people were sorry for him because he had no children and his wife was a scold. When he arrived in the square, carrying the black wooden box, there was a murmur of conversation among the villagers, and he waved and called. “Little late today, folks. ” The postmaster, Mr. Graves, followed him, carrying a three-legged stool, and the stool was put in the center of the square and Mr. Summers set the black box down on it. The villagers kept their distance, leaving a space between themselves and the stool, and when Mr. Summers said, “Some of you fellows want to give me a hand?” there was a hesitation before two men. Mr. Martin and his oldest son, Baxter, came forward to hold the box steady on the stool while Mr. Summers stirred up the papers inside it.\r\n\r\nThe original paraphernalia for the lottery had been lost long ago, and the black box now resting on the stool had been put into use even before Old Man Warner, the oldest man in town, was born. Mr. Summers spoke frequently to the villagers about making a new box, but no one liked to upset even as much tradition as was represented by the black box. There was a story that the present box had been made with some pieces of the box that had preceded it, the one that had been constructed when the first people settled down to make a village here. Every year, after the lottery, Mr. Summers began talking again about a new box, but every year the subject was allowed to fade off without anything’s being done. The black box grew shabbier each year: by now it was no longer completely black but splintered badly along one side to show the original wood color, and in some places faded or stained.', 1, 'ps11-1.png', 0, 0, 1, '2023-03-26 15:14:01', '2023-03-27 04:28:24'),
 (2, 1, 'I am the greatest', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png', 0, 0, 0, '2023-03-27 04:48:47', '0000-00-00 00:00:00'),
 (3, 1, 'I am the greatest', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png', 0, 0, 0, '2023-03-27 04:48:47', '0000-00-00 00:00:00'),
 (4, 1, 'I am the greatest', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png', 0, 0, 0, '2023-03-27 04:53:06', '0000-00-00 00:00:00'),
@@ -218,7 +236,51 @@ INSERT INTO `stories` (`id`, `user_id`, `title`, `description`, `category_id`, `
 (18786, 1, 'how many now', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png8', 0, 0, 0, '2023-03-27 05:52:09', '0000-00-00 00:00:00'),
 (18787, 1, 'how many now', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png8', 0, 0, 0, '2023-03-27 05:52:09', '0000-00-00 00:00:00'),
 (18788, 1, 'hia', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png8', 0, 0, 0, '2023-03-27 06:03:34', '0000-00-00 00:00:00'),
-(18789, 1, 'hia ka', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png8', 0, 0, 0, '2023-03-27 06:14:20', '0000-00-00 00:00:00');
+(18789, 1, 'hia ka', 'story that talks about my background, achievements', 1, 'tell me the story cos i dont have one now', 1, 'author.png8', 0, 0, 0, '2023-03-27 06:14:20', '0000-00-00 00:00:00'),
+(18790, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 08:57:44', '0000-00-00 00:00:00'),
+(18791, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 08:57:55', '0000-00-00 00:00:00'),
+(18792, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 08:58:44', '0000-00-00 00:00:00'),
+(18793, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 08:59:01', '0000-00-00 00:00:00'),
+(18794, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 08:59:24', '0000-00-00 00:00:00'),
+(18795, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 09:00:28', '0000-00-00 00:00:00'),
+(18796, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-29 09:01:03', '0000-00-00 00:00:00'),
+(18797, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:09:38', '0000-00-00 00:00:00'),
+(18798, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:10:14', '0000-00-00 00:00:00'),
+(18799, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:11:12', '0000-00-00 00:00:00'),
+(18800, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:11:31', '0000-00-00 00:00:00'),
+(18801, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:15:00', '0000-00-00 00:00:00'),
+(18802, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:15:23', '0000-00-00 00:00:00'),
+(18803, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:18:32', '0000-00-00 00:00:00'),
+(18804, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:19:02', '0000-00-00 00:00:00'),
+(18805, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:35:16', '0000-00-00 00:00:00'),
+(18806, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:42:24', '0000-00-00 00:00:00'),
+(18807, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:43:00', '0000-00-00 00:00:00'),
+(18808, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:43:53', '0000-00-00 00:00:00'),
+(18809, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:45:24', '0000-00-00 00:00:00'),
+(18810, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:45:42', '0000-00-00 00:00:00'),
+(18811, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:46:35', '0000-00-00 00:00:00'),
+(18812, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:46:40', '0000-00-00 00:00:00'),
+(18813, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:47:02', '0000-00-00 00:00:00'),
+(18814, 8, 'asdassasds', NULL, 3, '<p>asddsasd</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:52:04', '0000-00-00 00:00:00'),
+(18815, 8, 'SSJJSJSJ', NULL, 1, '<p>SSJSKJSKJ</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 0, '2023-03-30 05:52:24', '0000-00-00 00:00:00'),
+(18816, 8, 'SSJJSJSJ', NULL, 1, '<p>SSJSKJSKJ</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 0, '2023-03-30 05:53:08', '0000-00-00 00:00:00'),
+(18817, 8, 'SSSSSSKKL', NULL, 2, '<p>KJSKJSKJS</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 0, '2023-03-30 05:54:17', '0000-00-00 00:00:00'),
+(18818, 8, 'SSSSSSKKL', NULL, 2, '<p>KJSKJSKJS</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 0, '2023-03-30 05:55:51', '0000-00-00 00:00:00'),
+(18819, 8, 'SSSSSSKKL', NULL, 2, '<p>KJSKJSKJS</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 0, '2023-03-30 05:55:57', '0000-00-00 00:00:00'),
+(18820, 8, 'SSSSSSKKL', NULL, 2, '<p>KJSKJSKJS</p>\r\n', 3, 'passionate kiss.jpg', 0, 0, 1, '2023-03-30 05:56:04', '2023-03-30 03:33:08'),
+(18821, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 1, '2023-03-30 05:56:35', '2023-03-30 03:28:51'),
+(18823, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 05:58:03', '0000-00-00 00:00:00'),
+(18824, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:19:01', '0000-00-00 00:00:00'),
+(18825, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:19:45', '0000-00-00 00:00:00'),
+(18826, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:20:42', '0000-00-00 00:00:00'),
+(18827, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:20:48', '0000-00-00 00:00:00'),
+(18828, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:21:09', '0000-00-00 00:00:00'),
+(18829, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:21:32', '0000-00-00 00:00:00'),
+(18830, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:21:52', '0000-00-00 00:00:00'),
+(18831, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:22:15', '0000-00-00 00:00:00'),
+(18832, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:22:20', '0000-00-00 00:00:00'),
+(18833, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:22:21', '0000-00-00 00:00:00'),
+(18834, 8, 'KJKJWEKJKJWE', NULL, 4, '<p>KJWEJKWEJKWEKJ</p>\r\n', 1, 'storyspotter.png', 0, 0, 0, '2023-03-30 03:22:22', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -239,7 +301,7 @@ CREATE TABLE `users` (
   `bio` varchar(200) DEFAULT NULL,
   `followers` bigint(20) NOT NULL DEFAULT 0,
   `role_id` int(11) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(60) NOT NULL,
   `email_verified_at` datetime DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -249,9 +311,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `last_name`, `first_name`, `gender`, `dob`, `email`, `image`, `telephone`, `location_id`, `bio`, `followers`, `role_id`, `password`, `email_verified_at`, `created_at`) VALUES
-(1, 'David', 'Robinson', 'male', '2013-03-05', 'davidrobinson5616@yahoo.com', 'author-4.png', '+23480999999', 1, 'I am energetic author. I write stories and novels for fun', 0, 4, 'secret', NULL, '2023-03-27 22:33:21'),
+(1, 'David', 'Robinson', 'male', '2013-03-05', 'davidrobinson5616@yahoo.com', 'author-4.png', '+23480999999', 1, 'I am energetic author. I write stories and novels for fun', 0, 5, '$2y$10$6EavPa4uiLX4hijt8B4YlO9eOIhc4ez360AStTNNJ8DfDL6vxd29m', NULL, '2023-03-27 22:33:21'),
 (2, 'Mary', 'Robben', 'female', '2014-03-14', 'maryrobben@gamil.com', 'author.png', '2347882828828', 1, 'I love to read stories', 0, 3, 'secret', NULL, '2023-03-27 22:33:21'),
-(3, 'Eneje ', 'Everistus', 'male', '2013-03-14', 'enejeeveristus@gmail.com', NULL, '+552525525252', 1, 'I am the owner of storyspotter website.', 0, 5, 'secret', NULL, '2023-03-27 22:33:21');
+(3, 'Eneje ', 'Everistus', 'male', '2013-03-14', 'enejeeveristus@gmail.com', NULL, '+552525525252', 1, 'I am the owner of storyspotter website.', 0, 5, 'secret', NULL, '2023-03-27 22:33:21'),
+(8, 'Onyekelu', 'Chukwuebuka', NULL, NULL, 'CONYEKELU@YAHOO.COMg', NULL, NULL, NULL, NULL, 0, 4, '$2y$10$6EavPa4uiLX4hijt8B4YlO9eOIhc4ez360AStTNNJ8DfDL6vxd29m', NULL, '2023-03-28 06:00:57'),
+(9, 'Onyekelu', 'Chukwuebuka', NULL, NULL, 'CONYEKELU@YAHOO.COMs', NULL, NULL, NULL, NULL, 0, 4, '$2y$10$6EavPa4uiLX4hijt8B4YlO9eOIhc4ez360AStTNNJ8DfDL6vxd29m', NULL, '2023-03-29 09:03:55'),
+(10, 'Onyekelu', 'Chukwuebuka', NULL, NULL, 'CONYEKELU@YAHOO.COMii', NULL, NULL, NULL, NULL, 0, 3, '$2y$10$6EavPa4uiLX4hijt8B4YlO9eOIhc4ez360AStTNNJ8DfDL6vxd29m', NULL, '2023-03-29 09:13:40');
 
 --
 -- Indexes for dumped tables
@@ -331,7 +396,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `locations`
@@ -361,13 +426,13 @@ ALTER TABLE `role_privileges`
 -- AUTO_INCREMENT for table `stories`
 --
 ALTER TABLE `stories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18790;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18835;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
